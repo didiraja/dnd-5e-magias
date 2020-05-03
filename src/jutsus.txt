@@ -1,0 +1,114 @@
+Bomba de Fumaça
+Chacra da Mente de Nível Básico
+(ninja , vento)
+Custo: 1PM ; Tempo de Execução: Padrão; Alcance: Curto; Área: 6m raio; Efeito: nuvem com 6m de raio e altura; Alvo: X; Duração: Cena; Teste de Resistência: nenhum.
+
+Uma explosão faz uma névoa espessa (de cor escolhida por você) elevar-se de um ponto à sua escolha, obscurecendo a visão; criaturas
+a até 1,5m têm camuflagem e criaturas a partir de 3m têm camuflagem total.
+Um vento forte dispersa a névoa em 4 rodadas e um vendaval a dispersa em 1 rodada. Este jutsu não funciona sob a água.
++1 PM: muda o descritor vento para ácido. O jutsu passa a funcionar sob a água, criando uma nuvem de tinta.
++2 PM: até 10 criaturas escolhidas por você enxergam através do efeito.
++2 PM: a nuvem tem um cheiro horrível. Qualquer criatura dentro dela, ou qualquer criatura com faro a até 9m da nuvem, deve fazer um teste de Fortitude no início de seus turnos. Se falhar, fica enjoada por 1 rodada.
++5 PM: a nuvem é espessa, quase sólida. Qualquer criatura dentro dela tem seu deslocamento reduzido para 1,5m (independente de seu deslocamento normal) e sofre penalidade de –2 nas jogadas de ataque e dano
+
+==================
+
+Daiki, Erva Quente
+Criar Elemento
+Chacra da Mente de Nível Básico
+(invocação , elemental)
+Custo: 1PM; Tempo de Execução: Padrão; Alcance: CaC; Área: X; Efeito: Elemento Escolhido; Alvo: X; Duração: Instant; Teste de Resistência: nenhum.
+
+Água: enche um recipiente de tamanho Mínimo (como uma tokkuri) com água
+potável. Se não tiver um recipiente, cria um cubo de gelo de tamanho Mínimo.
+Ar: cria um vento fraco em uma área de 1,5m de diâmetro. Isso purifica a área de
+qualquer gás ou fumaça por uma rodada.
+Fogo: cria uma chama com a intensidade
+de uma tocha. Pode servir para iluminação ou atear fogo em um objeto ou criatura. Nesse caso, faça um ataque de toque corpo-a-corpo para acertar, causando 1d4 pontos de dano de fogo.
+Terra: cria um cubo ou esfera de tamanho Mínimo feito de terra, argila ou pedra.
+Os elementos criados são reais, não mágicos. Elementos físicos devem surgir em uma superfície horizontal. Pode-se criar objetos simples (sem partes móveis) de gelo, terra, pedra com um teste de um Ofício apropriado.
++1 PM: aumenta a quantidade do elemento em um passo (mais uma categoria
+de tamanho para água ou terra, +1 quadrado de 1,5m para ar e +1d4 pontos de
+dano para fogo).
++1 PM: pode arremessar imediatamente um cubo ou esfera que tenha criado em
+uma criatura ou objeto a até 9m. Faça um ataque de toque à distância. Se acertar, causa
+1d6 pontos de dano de esmagamento. Para cada categoria de tamanho acima de Mínimo, o dano aumenta em +1d6. O cubo ou esfera se desfaz após acertar ou errar.
++1 PM: pode arremessar imediatamente uma chama que tenha criado em uma
+criatura ou objeto a até 9m. Faça um ataque de toque à distância. Se acertar, causa
+o dano indicado.
+
+============================
+
+Daiki, Erva Quente
+Fogo-Fatuo
+Chacra da Mente de Nível Básico
+(luz)
+Custo: 1PM; Tempo de Execução: padrão; Alcance: Curto; Área: X; Efeito: 4 esferas de luz; Alvo: X; Duração: Cena; Teste de Resistência: nenhum.
+
+Este jutsu cria até quatro pequenas esferas de luz espectral que iluminam como uma
+tocha e que você pode posicionar onde quiser dentro do alcance. Depois disso, movimentar as esferas exige uma ação livre. Se uma esfera ocupar o espaço de uma criatura, sua silhueta passa a ser vista claramente, e ela não recebe camuflagem por escuridão ou invisibilidade.
++1 PM: enquanto uma esfera ocupar o espaço de uma criatura, ela também fica ofuscada.
++5 PM: enquanto uma esfera ocupar o espaço de uma criatura, ela também fica cega (Reflexos anula).
+
+=========================
+
+Daiki, Erva Quente
+Mandala Escudo
+Chacra da Mente de Nível Básico
+(abjuração)
+Custo: 1PM; Tempo de Execução: Reação; Alcance: pessoal; Alvo: Usuario; Duração: 1 rodada; Teste de Resistência: nenhum.
+
+Você traça no ar uma mandala mística que o protege contra ataques físicos,
+recebendo CA+4.
+
++1 PM: aumenta o bônus em +1.
++2 PM: muda o alcance para curto e o alvo para criaturas escolhidas.
++5 PM: o alvo também recebe redução de dano igual ao bônus na CA.
+
+===============================
+
+Daiki, Erva Quente
+Voz de Lin-Wu
+Chacra das Emoções de Nível Básico
+(Encantamento)
+Custo: 1PM; Tempo de Execução: Padrão; Alcance: curto; Área: X; Alvo: 1 Humanoide; Duração: 1 Rodada; Teste de Resistência: Vontade - CD 15 - Anula; CD para resistir: 15.
+
+Um comando superior não pode ser desobedecido. Você deve falar no idioma do alvo, dando uma ordem simples. Ele, em seu próprio turno, obedece da melhor maneira possível. Os comandos possíveis são:
+Caia: o alvo se joga no chão — ou cai de onde estiver, caso esteja em lugar alto — e
+não se levanta até o próximo turno. Como esta é uma ação livre, ele ainda pode executar outras ações (exceto se levantar).
+Fuja: o alvo gasta seu turno se afastando de você (usando duas ações de movimento).
+Largue: o alvo solta quaisquer itens que esteja segurando com as mãos, e não pode
+pegá-los novamente até o início do próximo turno. Como esta é uma ação livre, ele ainda pode executar outras ações (exceto pegar aquilo que largou).
+Pare: o alvo fica pasmo (não pode fazer ações).
+Venha: o alvo gasta seu turno se aproximando de você (usando duas ações de
+movimento).
++1 PM: muda o alvo para 1 criatura.
++2 PM: aumenta a quantidade de alvos em +1.
+
+====================================
+
+Daiki, Erva Quente
+Arma Incendiaria
+Chacra dos Braços de Nível Básico
+(fogo)
+Custo: 1 PM ; Tempo de Execução: Movimento; Alcance: pessoal; Área: X; Efeito: X; Alvo: 1 arma CaC; Duração: cena; Teste de Resistência: nenhum.
+
+A arma escolhida é envolvida por chamas mágicas, causando +1d6 pontos de dano
+de fogo. Se soltar a arma, o jutsu se esvai.
++1 PM: muda o alvo para armas de ataque à distância. Afeta qualquer arma arremessada
+por você ou projétil disparado pela arma.
++2 PM: muda o bônus para +1d10.
++2 PM: se você acertar um crítico com a arma afetada, o oponente é derrubado.
+
+============================
+
+Daiki, Erva Quente
+Esfera Elétrica
+Chacra da Mente de Nível Básico
+(eletricidade)
+Custo: 1 PM; Tempo de Execução: padrão; Alcance: pessoal; Área: 3m de raio; Efeito: X; Alvo: X; Duração: Instant; Teste de Resistência: Fortitude - CD 15 - Anula; CD para resistir: 15.
+
+Relâmpagos explodem ao seu redor. Criaturas na área sofrem 2d8 pontos de dano de eletricidade. Criaturas usando armaduras de metal (ou carregando muito metal) sofrem –4 em seu teste de resistência.
++1 PM: muda o teste de resistência para Fortitude reduz à metade.
++2 PM: aumenta o dano em +1d8.
++2 PM: muda o alcance para 9m.
