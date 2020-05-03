@@ -1,9 +1,12 @@
 <script>
-	import skills from './daiki.json';
-
-	let data = skills.jutsus;
-
+	import { skills } from './daiki.js';
 	import * as JsSearch from 'js-search';
+	import SkillCard from './components/SkillCard.svelte';
+
+	// JSON to state
+	let data = skills;
+
+	// Search Modules
 	const search = new JsSearch.Search('id');
 	search.addIndex('name');
 	search.addIndex('desc');
@@ -12,14 +15,14 @@
 	let searchValue = '';
 
 	const searchSkill = () => {
-
-		if (searchValue.length === 0) {
-			return data = skills.jutsus;
-		}
+		
+		// if (searchValue.length === 0) {
+			// 	return data = skills;
+		// }
 
 		const skillsLoop = search.search(searchValue);
 
-		return data = skillsLoop;
+		// return data = skillsLoop;
 
 	};
 </script>
@@ -29,35 +32,6 @@
 
 	:global(body) {
 		background-color: $bg;
-	}
-
-	.skill-item {
-		margin-bottom: 30px;
-		background-color: #a4a29e;
-		padding: 20px;
-    border-radius: 30px;
-	}
-
-	.skill-stats {
-		margin: 15px 0;
-		padding: 0;
-		font-style: italic;
-	}
-
-	.skill-stats li {
-		display: inline;
-	}
-
-	.skill-stats li ~ li {
-		margin-left: 10px;
-	}
-
-	.skill-desc {
-		margin-bottom: 15px;
-	}
-
-	.skill-bonus {
-		padding-left: 15px;
 	}
 </style>
 
@@ -71,24 +45,12 @@
 	</div>
 
 	<div class="main">
-		{#each data as jutsu, i}
-				<div class="skill-item">
-						<h2 class="skill-name">{jutsu.name}</h2>
-						<ul class="skill-stats">
-							{#each data[i].stats as stat}
-							<li><small> <strong>{stat.name}:</strong> {stat.desc}</small></li>
-							{/each}
-						</ul>
-						<p class="skill-desc">{@html jutsu.desc}</p>
-						<ul class="skill-bonus">
-							{#each jutsu.bonus as bonus, i}
-								<li>
-									<strong>{Object.keys(bonus)}</strong> - {Object.values(bonus)}
-								</li>
-							{/each}
-						</ul>
-				</div>
-		{/each}
+
+			<SkillCard data={data.race} />	
+			<SkillCard data={data.class} />
+			<SkillCard data={data.talents} />
+			<SkillCard data={data.jutsus} />
+
 	</div>
 
 </div>
