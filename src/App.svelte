@@ -4,34 +4,24 @@
 	import SkillCard from './components/SkillCard.svelte';
 
 	// JSON to state
-	let raceSkills = skills.race;
-	let classSkills = skills.class;
-	let talentSkills = skills.talents;
-	let jutsuSkills = skills.jutsus;
+	let data = skills;
 
 	// Search Modules
-	const search = new JsSearch.Search('id');
-	search.addIndex('name');
-	search.addIndex('desc');
-	search.addDocuments(raceSkills);
-	search.addDocuments(classSkills);
-	search.addDocuments(talentSkills);
-	search.addDocuments(jutsuSkills);
+	const searchAll = new JsSearch.Search('id');
+	searchAll.addIndex('name');
+	searchAll.addIndex('type');
+	searchAll.addIndex('desc');
+	searchAll.addDocuments(skills);
 
 	let searchValue = '';
 
+	const resetState = () => data = skills;
+
 	const searchSkill = () => {
 		
-		if (searchValue.length === 0) {
-			raceSkills = skills.race;
-			classSkills = skills.class;
-			talentSkills = skills.talents;
-			jutsuSkills = skills.jutsus;
-		}
+		if (searchValue.length === 0) resetState();
 
-		if (searchValue.length >= 2) {
-			raceSkills = search.search(searchValue);
-		}
+		if (searchValue.length >= 2) data = searchAll.search(searchValue);
 
 	};
 </script>
@@ -55,10 +45,7 @@
 
 	<div class="main">
 
-			<SkillCard data={raceSkills} />	
-			<SkillCard data={classSkills} />
-			<SkillCard data={talentSkills} />
-			<SkillCard data={jutsuSkills} />
+			<SkillCard data={data} />
 
 	</div>
 
