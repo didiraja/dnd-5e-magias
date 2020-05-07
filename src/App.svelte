@@ -27,16 +27,49 @@
 </script>
 
 <style type="text/scss">
-	$bg: #ccc;
+	$bg: #343a42;
 
 	:global(body) {
 		background-color: $bg;
+	}
+
+	.wrapper {
+		width: 95%;
+    margin: 0 auto;
+    padding-top: 10px;
+	}
+
+	.top {
+		margin-bottom: 21px;
+
+		input {
+			width: 500px;
+			height: 50px;
+			margin: 0 auto;
+			padding: 10px;
+			border-radius: 5px;
+			display: block;
+			font-size: 20px;
+		}
+
+		.title {
+			font-family: 'Rancho', cursive;
+			color: white;
+			text-align: center;
+			font-size: 80px;
+			letter-spacing: 6px;
+			margin: 0;
+		}
+
 	}
 </style>
 
 <div class="wrapper">
 
 	<div class="top">
+
+		<h1 class="title">Skill Lurker</h1>
+
 		<input
 			type="text" placeholder="Busque sua habilidade"
 			bind:value={searchValue} on:input={searchSkill}

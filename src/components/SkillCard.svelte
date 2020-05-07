@@ -4,15 +4,17 @@
 <style type="text/scss">
   .skill-item {
 		margin-bottom: 30px;
-		background-color: #a4a29e;
-		padding: 20px;
-    border-radius: 30px;
+    padding: 20px;
+    box-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),
+    0px 1px 1px 0px rgba(0,0,0,0.14), 0px 1px 3px 0px rgba(0,0,0,0.12);
+    background-color: #F2F1EF;
 	}
 
 	.skill-stats {
-		margin: 15px 0;
-		padding: 0;
-		font-style: italic;
+    margin: 15px 0;
+    padding: 20px 15px;
+    font-style: italic;
+    background-color: #dbdbdb;
 	}
 
 	.skill-stats li {
@@ -28,7 +30,17 @@
 	}
 
 	.skill-bonus {
-		padding-left: 15px;
+    background-color: #fcf2cf;
+    padding: 20px 30px;
+    
+    & li {
+      margin-bottom: 15px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
 	}
 </style>
 
