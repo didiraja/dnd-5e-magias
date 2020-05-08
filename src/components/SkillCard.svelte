@@ -1,6 +1,3 @@
-<script>
-</script>
-
 <style type="text/scss">
   .skill-item {
 		margin-bottom: 30px;

@@ -45,21 +45,35 @@ export const skills = [
     type: "class",
     name: "Percepção Elemental",
     desc:
-      "A ligação do wu-jen com as energias elementais primordiais é forte. Com uma ação padrão para se concentrar, você detecta objetos ou fontes de um elemento (água, ar, fogo ou terra) escolhido no momento do uso. Quanto mais tempo se concentra, mais você descobre, conforme abaixo. 1 rodada: você percebe a existência e a quantidade de objetos ou fontes do elemento na área. 2 rodadas: você percebe o tamanho de cada objeto ou fonte do elemento existente na área. 3 rodadas: você sabe dizer onde está cada objeto ou fonte do elemento na área (mesmo aquelas escondidas ou invisíveis). Esta habilidade não detecta criaturas, apenas objetos. Ela tem alcance de 9m, em qualquer direção. Água inclui gelo, neve, vapor e líquidos. Fogo inclui objetos aquecidos a mais de 70º (mesmo em estado líquido) e lava. Terra inclui rocha, pedra, metais, gemas, ácidos e venenos (mesmo em estado líquido). Ar inclui quaisquer gases (mesmo ácidos, venenos ou vapor)",
+      "A ligação do wu-jen com as energias elementais primordiais é forte. Com uma ação padrão para se concentrar, você detecta objetos ou fontes de um elemento (água, ar, fogo ou terra) escolhido no momento do uso. Quanto mais tempo se concentra, mais você descobre, conforme abaixo. <br/><br/> Esta habilidade não detecta criaturas, apenas objetos. Ela tem alcance de 9m, em qualquer direção. <strong>Água</strong> inclui gelo, neve, vapor e líquidos. <strong>Fogo</strong> inclui objetos aquecidos a mais de 70º (mesmo em estado líquido) e lava. <strong>Terra</strong> inclui rocha, pedra, metais, gemas, ácidos e venenos (mesmo em estado líquido). <strong>Ar</strong> inclui quaisquer gases (mesmo ácidos, venenos ou vapor).",
+      bonus: [
+        {
+          "1 rodada":
+            "você percebe a existência e a quantidade de objetos ou fontes do elemento na área",
+        },
+        {
+          "2 rodadas":
+            "você percebe o tamanho de cada objeto ou fonte do elemento existente na área.",
+        },
+        {
+          "3 rodadas:":
+            "você sabe dizer onde está cada objeto ou fonte do elemento na área (mesmo aquelas escondidas ou invisíveis.",
+        },
+      ],
   },
   {
     id: ID(),
     type: "class",
     name: "Raio Elemental",
     desc:
-      "O puro poder elemental também pode ser usado ofensivamente. Como uma ação padrão, o wu-jen pode fazer um ataque de toque à distância a até 9m; se acertar, causa 1d4 pontos de dano (ácido, eletricidade, fogo, frio ou vento, escolhido no momento do uso). Esta habilidade conta como um jutsu para todos os propósitos; você deve fazer selos e mantras para usá-la, ela é afetada por resistência a jutsus, e também por talentos como Wu-jen de Batalha ou de aprimoramento (pelo custo adicional). No 5º nível, ao disparar o raio elemental, você pode somar seu bônus de Inteligência à jogada de ataque e causa 1d6 pontos de dano. No 9º nível, causa 1d8 pontos de dano. No 13º nível, pode disparar o raio a até 30m e causa 1d10 pontos de dano. Por fim, no 17º nível, causa 1d12 pontos de dano e pode disparar múltiplos raios com uma única ação padrão, gastando 1 PM por raio adicional além do primeiro, até um máximo de raios igual a seu modificador de Inteligência.",
+      "O puro poder elemental também pode ser usado ofensivamente. Como uma ação padrão, o wu-jen pode fazer um ataque de toque à distância a até 9m; se acertar, causa 1d4 pontos de dano (ácido, eletricidade, fogo, frio ou vento, escolhido no momento do uso). Esta habilidade conta como um jutsu para todos os propósitos; você deve fazer selos e mantras para usá-la, ela é afetada por resistência a jutsus, e também por talentos como Wu-jen de Batalha ou de aprimoramento (pelo custo adicional). <br/><br/> No 5º nível, ao disparar o raio elemental, você pode somar seu bônus de Inteligência à jogada de ataque e causa 1d6 pontos de dano. No 9º nível, causa 1d8 pontos de dano. No 13º nível, pode disparar o raio a até 30m e causa 1d10 pontos de dano. Por fim, no 17º nível, causa 1d12 pontos de dano e pode disparar múltiplos raios com uma única ação padrão, gastando 1 PM por raio adicional além do primeiro, até um máximo de raios igual a seu modificador de Inteligência.",
   },
   {
     id: ID(),
     type: "talent",
     name: "Vontade de Ferro",
     desc:
-      "Você tem uma imensa força de vontade. Benefício: seu bônus de Vontade aumenta em +2. Especial: você pode escolher este talento diversas vezes. Seus efeitos se acumulam",
+      "Você tem uma imensa força de vontade. <strong>Benefício:</strong> seu bônus de Vontade aumenta em +2. <strong>Especial:</strong> você pode escolher este talento diversas vezes. Seus efeitos se acumulam",
   },
   {
     id: ID(),
@@ -159,7 +173,7 @@ export const skills = [
       },
     ],
     desc:
-      "Água: enche um recipiente de tamanho Mínimo (como uma tokkuri) com água potável. Se não tiver um recipiente, cria um cubo de gelo de tamanho Mínimo. Ar: cria um vento fraco em uma área de 1,5m de diâmetro. Isso purifica a área de qualquer gás ou fumaça por uma rodada. Fogo: cria uma chama com a intensidade de uma tocha. Pode servir para iluminação ou atear fogo em um objeto ou criatura. Nesse caso, faça um ataque de toque corpo-a-corpo para acertar, causando 1d4 pontos de dano de fogo. Terra: cria um cubo ou esfera de tamanho Mínimo feito de terra, argila ou pedra. Os elementos criados são reais, não mágicos. Elementos físicos devem surgir em uma superfície horizontal. Pode-se criar objetos simples (sem partes móveis) de gelo, terra, pedra com um teste de um Ofício apropriado.",
+      "<strong>Água:</strong> enche um recipiente de tamanho Mínimo (como uma tokkuri) com água potável. Se não tiver um recipiente, cria um cubo de gelo de tamanho Mínimo. <br/><br/> <strong>Ar:</strong> cria um vento fraco em uma área de 1,5m de diâmetro. Isso purifica a área de qualquer gás ou fumaça por uma rodada. <br/><br/> <strong>Fogo:</strong> cria uma chama com a intensidade de uma tocha. Pode servir para iluminação ou atear fogo em um objeto ou criatura. Nesse caso, faça um ataque de toque corpo-a-corpo para acertar, causando 1d4 pontos de dano de fogo. <br/><br/> <strong>Terra:</strong> cria um cubo ou esfera de tamanho Mínimo feito de terra, argila ou pedra. Os elementos criados são reais, não mágicos. Elementos físicos devem surgir em uma superfície horizontal. <br/><br/> Pode-se criar objetos simples (sem partes móveis) de gelo, terra, pedra com um teste de um Ofício apropriado.",
     bonus: [
       {
         "+1 PM":
@@ -310,7 +324,7 @@ export const skills = [
       },
     ],
     desc:
-      "Um comando superior não pode ser desobedecido. Você deve falar no idioma do alvo, dando uma ordem simples. Ele, em seu próprio turno, obedece da melhor maneira possível. Os comandos possíveis são: Caia: o alvo se joga no chão — ou cai de onde estiver, caso esteja em lugar alto — e não se levanta até o próximo turno. Como esta é uma ação livre, ele ainda pode executar outras ações (exceto se levantar). Fuja: o alvo gasta seu turno se afastando de você (usando duas ações de movimento). Largue: o alvo solta quaisquer itens que esteja segurando com as mãos, e não pode pegá-los novamente até o início do próximo turno. Como esta é uma ação livre, ele ainda pode executar outras ações (exceto pegar aquilo que largou). Pare: o alvo fica pasmo (não pode fazer ações). Venha: o alvo gasta seu turno se aproximando de você (usando duas ações de movimento).",
+      "Um comando superior não pode ser desobedecido. Você deve falar no idioma do alvo, dando uma ordem simples. Ele, em seu próprio turno, obedece da melhor maneira possível. Os comandos possíveis são: <br/><br/> <strong>Caia:</strong> o alvo se joga no chão — ou cai de onde estiver, caso esteja em lugar alto — e não se levanta até o próximo turno. Como esta é uma ação livre, ele ainda pode executar outras ações (exceto se levantar). <br/><br/> <strong>Fuja:</strong> o alvo gasta seu turno se afastando de você (usando duas ações de movimento). <br/><br/> <strong>Largue:</strong> o alvo solta quaisquer itens que esteja segurando com as mãos, e não pode pegá-los novamente até o início do próximo turno. Como esta é uma ação livre, ele ainda pode executar outras ações (exceto pegar aquilo que largou). <br/><br/> <strong>Pare:</strong> o alvo fica pasmo (não pode fazer ações). <br/><br/> <strong>Venha:</strong> o alvo gasta seu turno se aproximando de você (usando duas ações de movimento).",
     bonus: [
       {
         "+1 PM": "muda o alvo para 1 criatura.",
