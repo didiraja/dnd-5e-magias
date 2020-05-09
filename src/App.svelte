@@ -3,33 +3,57 @@
 	import * as JsSearch from 'js-search';
 	import SkillCard from './components/SkillCard.svelte';
 
-	// JSON to state
-	let data = skills;
-
 	// Search Modules
 	const searchAll = new JsSearch.Search('id');
 	searchAll.addIndex('name');
 	searchAll.addIndex('type');
 	searchAll.addIndex('desc');
 	searchAll.addDocuments(skills);
+	
+	// *** CONSTANTS ***
+
+	// JSON to state
+	let data = skills;
+
+	const nav = ['Raça','Classe','Talento','Jutsu'];
 
 	let searchValue = '';
 
 	let btnIndex = 4;
 
-	function toggleBtn(event) {
+	// *** METHODS ***
+	function toggleBtn(id) {
 
-		if (btnIndex == event) {
+		if (btnIndex == id) {
 			return btnIndex = 4;
 		}
 
-		btnIndex = event;
+		btnIndex = id;
 
-		console.log(btnIndex);	
+		let tagFilter;
+		switch (nav[id]) {
+			case 'Raça':
+				tagFilter = 'race';
+				break;
+			case 'Classe':
+				tagFilter = 'class';
+				break;
+			case 'Talento':
+				tagFilter = 'talent';
+				break;
+			case 'Jutsu':
+				tagFilter = 'jutsu';
+				break;
+		}
+
+		const skillById = skills.filter((item) => item.type == tagFilter);
+
+		data = skillById;
 
 	};
 
 	function resetState() {
+		btnIndex = 4;
 		return data = skills
 	};
 
@@ -134,7 +158,7 @@
 
 	<div class="nav">
 
-		{#each ['Raça','Classe','Talento','Jutsu'] as item, index}
+		{#each nav as item, index}
 			<button
 				id={index}
 				class:active={btnIndex == index}
