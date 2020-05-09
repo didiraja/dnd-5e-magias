@@ -19,25 +19,21 @@
 
 	function toggleBtn(event) {
 
+		if (btnIndex == event) {
+			return btnIndex = 4;
+		}
+
 		btnIndex = event;
 
 		console.log(btnIndex);	
 
 	};
 
-	// const handleActive = (index) => {
+	function resetState() {
+		return data = skills
+	};
 
-	// 	console.log(btnIndex, index, btnIndex == index);
-
-	// 	// if (btnIndex == index) return true;
-
-	// 	// return false;
-
-	// };
-
-	const resetState = () => data = skills;
-
-	const searchSkill = () => {
+	function searchSkill() {
 		
 		if (searchValue.length === 0) resetState();
 
