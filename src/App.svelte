@@ -15,6 +15,26 @@
 
 	let searchValue = '';
 
+	let btnIndex = 4;
+
+	function toggleBtn(event) {
+
+		btnIndex = event;
+
+		console.log(btnIndex);	
+
+	};
+
+	// const handleActive = (index) => {
+
+	// 	console.log(btnIndex, index, btnIndex == index);
+
+	// 	// if (btnIndex == index) return true;
+
+	// 	// return false;
+
+	// };
+
 	const resetState = () => data = skills;
 
 	const searchSkill = () => {
@@ -117,10 +137,16 @@
 	</div>
 
 	<div class="nav">
-		<button>Raça</button>
-		<button class="active">Classe</button>
-		<button>Talento</button>
-		<button>Jutsu</button>
+
+		{#each ['Raça','Classe','Talento','Jutsu'] as item, index}
+			<button
+				id={index}
+				class:active={btnIndex == index}
+				on:click={() => toggleBtn(event.target.id)}
+			>
+				{item}
+			</button>
+		{/each}
 	</div>
 
 	<div class="main">
