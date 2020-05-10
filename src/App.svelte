@@ -11,15 +11,11 @@
 	searchAll.addDocuments(skills);
 	
 	// *** CONSTANTS ***
-
-	// JSON to state
 	let data = skills;
-
 	const nav = ['Raça','Classe','Talento','Jutsu'];
-
 	let searchValue = '';
-
 	let btnIndex = 4;
+
 
 	// *** METHODS ***
 	function toggleBtn(id) {
@@ -60,11 +56,8 @@
 	};
 
 	function searchSkill() {
-		
 		if (searchValue.length === 0) resetState();
-
 		if (searchValue.length >= 2) data = searchAll.search(searchValue);
-
 	};
 </script>
 
