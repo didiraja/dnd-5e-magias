@@ -25,7 +25,9 @@
 	function toggleBtn(id) {
 
 		if (btnIndex == id) {
-			return btnIndex = 4;
+			btnIndex = 4;
+			resetState();
+			return;
 		}
 
 		btnIndex = id;
@@ -162,7 +164,7 @@
 			<button
 				id={index}
 				class:active={btnIndex == index}
-				on:click={() => toggleBtn(event.target.id)}
+				on:click={(event) => toggleBtn(event.target.id)}
 			>
 				{item}
 			</button>
