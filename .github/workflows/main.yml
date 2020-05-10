@@ -1,0 +1,15 @@
+name: deploy website
+on: [pull_request]
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: amondnet/now-deployment@v2
+        with:
+          zeit-token: '1CWDdkv57rgOlP283Il09B6q' # Required
+          github-token: ${{ secrets.GITHUB_TOKEN }} #Optional 
+          now-args: '--prod' #Optional
+          now-org-id: 'didiraja'  #Required
+          now-project-id: 'skill-lurker' #Required 
+          working-directory: ./sub-directory
