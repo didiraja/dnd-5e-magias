@@ -2,4 +2,10 @@
 
 Easy way to find my RPG character skills
 
-Made with <3 and Svelte 
+# Demo
+https://skill-lurker.now.sh/
+
+# Stack
+- Svelte 3
+- Sass
+- Love
