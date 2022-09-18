@@ -1,102 +1,38 @@
-import React, { useState, useEffect, useReducer, } from "react";
+import React, { useState } from "react";
 import logo from "./logo.svg";
 import "./App.scss";
-import axios from "axios";
+import SpellsList from './docs/spells.json'
+import * as JsSearch from 'js-search';
 
-const dataFetchReducer = (state, action) => {
-  switch (action.type) {
-    case 'FETCH_INIT':
-      return { ...state, isLoading: true, isError: false };
-    case 'FETCH_SUCCESS':
-      return {
-        ...state,
-        isLoading: false,
-        isError: false,
-        data: action.payload,
-      };
-    case 'FETCH_FAILURE':
-      return {
-        ...state,
-        isLoading: false,
-        isError: true,
-      };
-    default:
-      throw new Error();
-  }
-};
+// SpellName
+// Classes
+// Level
+// School
+// Ritual
+// Concentration
+// Verbal
+// Somatic
+// Time
+// Reach
+// Material
+// Duration
+// Description
+const SearchEngine = new JsSearch.Search('SpellName');
 
-const useDataApi = (initialUrl, initialData) => {
-  const [url, setUrl] = useState(initialUrl);
-
-  const [state, dispatch] = useReducer(dataFetchReducer, {
-    isLoading: false,
-    isError: false,
-    data: initialData,
-  });
-
-  useEffect(() => {
-    let didCancel = false;
-
-    const fetchData = async () => {
-      dispatch({ type: 'FETCH_INIT' });
-
-      try {
-        const result = await axios(url);
-
-        if (!didCancel) {
-          dispatch({ type: 'FETCH_SUCCESS', payload: result.data });
-        }
-      } catch (error) {
-        if (!didCancel) {
-          dispatch({ type: 'FETCH_FAILURE' });
-        }
-      }
-    };
-
-    fetchData();
-
-    return () => {
-      didCancel = true;
-    };
-  }, [url]);
-
-  return [state, setUrl];
-};
-
+SearchEngine.addIndex('Description');
+SearchEngine.addIndex('Classes');
+SearchEngine.addDocuments(SpellsList);
 
 const App = () => {
 
-  const [{ data, isLoading, isError }, doFetch] = useDataApi(
-    'https://hn.algolia.com/api/v1/search?query=redux',
-    { hits: [] },
-  );
+  const [spells, setSpells] = useState(SpellsList);
 
-  // const data = {
-  //   dataSource: "personal-app",
-  //   database: "app",
-  //   collection: "spell-list",
-  //   filter: {}
-  // };
+  const searchSpell = (query) => {
 
-  // const config = {
-  //   method: "post",
-  //   url: "https://us-east-1.aws.data.mongodb-api.com/app/data-njmii/endpoint/data/v1/action/find",
-  //   headers: {
-  //     "Content-Type": "application/json",
-  //     // "Access-Control-Request-Headers": "*",
-  //     "api-key":
-  //     "xaab4t4xmxJrAaHSPaoOJiz4rIPqFnW3XKKwhwb4nksPEAQwvPVQuTaZreSbEvfi",
-  //   },
-  //   data: data,
-  // };
-
-	// axios(config)
-	// 	.then((response) => {
-	// 		useSpells(response.data.documents)
-	// 	})
-	// 	.catch((error) => {
-	// 		console.log(error);
-	// 	});
+    const result = SearchEngine.search(query);
+  
+    setSpells(result);
+  };
 
   return (
     <div className="App">
@@ -115,13 +51,14 @@ const App = () => {
         </a>
       </header>
 
-			{/* {
-				spells.map((spell, index) => {
+      <input className="search" type="text" onChange={e => searchSpell(e.target.value)} />
 
-					
+      <ul className="list">
+        {spells.length > 0 && spells.map((spell, i) => {
+          return <li key={i}>{spell.SpellName} - {spell.Classes}</li>
+        })}
+      </ul>
 
-				})
-			} */}
     </div>
   );
 }

@@ -1,5 +1,10 @@
 body {
   background-color: #282c34;
+  color: white;
+}
+
+input {
+  color: black;
 }
 
 .App {
@@ -9,6 +14,14 @@ body {
 .App-logo {
   height: 100px;
   pointer-events: none;
+}
+
+.list {
+  padding: 0;
+  text-align: left;
+  list-style: bengali;
+  width: 60%;
+  margin: 0 auto;
 }
 
 @media (prefers-reduced-motion: no-preference) {
