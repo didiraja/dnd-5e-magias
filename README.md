@@ -2,4 +2,4 @@
 
 Dungeon and Dragons 5e - Lista de Magias em Português
 
-- [Demo](https://vercel.com/didiraja/dnd-5e-magias)
+- [App](https://dnd-5e-magias.vercel.app/)
