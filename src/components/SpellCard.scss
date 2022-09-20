@@ -1,0 +1,55 @@
+$bege: #A68D67;
+$disabled: #374151;
+
+.spell-card {
+    background-color: #111827;
+    @apply rounded-md mb-5;
+
+    .Header {
+      background-color: $disabled;
+      @apply rounded-t-md font-bold text-xl p-5;
+    }
+
+    .button {
+      border-color: $bege;
+      @apply border rounded-md p-2 pt-1 inline-block leading-none;
+
+      &.disabled {
+        color: $disabled;
+        border-color: $disabled;
+      }
+
+      span {
+        color: white;
+      }
+    }
+
+    .Description {
+
+      @apply p-5;
+      
+      .props {
+        color: $bege;
+        @apply border-b mb-5 pb-2;
+
+        .classes, .settings, .type {
+          @apply mb-3
+        }
+
+        .classes {
+        }
+
+        .settings {
+
+        }
+
+        .type {
+
+        }
+      }
+
+      p {
+        @apply text-xl;
+      }
+    }
+}
