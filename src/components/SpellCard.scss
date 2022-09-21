@@ -41,7 +41,7 @@ $disabled: #374151;
         @apply border-b mb-5 pb-2;
 
         .classes, .settings, .type {
-          @apply mb-3;
+          @apply inline-block mb-3;
 
           .button ~ .button {
             @apply ml-5;

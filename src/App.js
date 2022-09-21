@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import logo from "./logo.svg";
 import "./App.scss";
 import SpellsList from './docs/spells.json'
 import * as JsSearch from 'js-search';
@@ -7,8 +6,9 @@ import SpellCard from './components/SpellCard.js'
 
 const SearchEngine = new JsSearch.Search('SpellName');
 
-SearchEngine.addIndex('Description');
+SearchEngine.addIndex('SpellName');
 SearchEngine.addIndex('Classes');
+SearchEngine.addIndex('Description');
 SearchEngine.addDocuments(SpellsList);
 
 const App = () => {
@@ -45,8 +45,8 @@ const App = () => {
 
       <div className="spells-wrapper w-[90%] my-0 mx-auto">
         {
-          spells.length > 0 && spells.map((spell) => {
-            return (<SpellCard {...spell} />)
+          spells.length > 0 && spells.map((spell, i) => {
+            return (<SpellCard {...spell} key={i} />)
           })
         }
       </div>

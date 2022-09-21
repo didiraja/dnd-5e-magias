@@ -1,9 +1,7 @@
 import React from "react";
 import './SpellCard.scss';
 
-const convertBool = (int) => {
-
-	const bool = Boolean(int);
+const convertBool = (bool) => {
 
 	if (!bool)
 		return `disabled`
@@ -31,7 +29,11 @@ const SpellCard = ({
 				<div className="props">
 
 					<div className="classes">
-						{Classes}
+            {
+              Classes.map((classe, i) => {
+                return <p className="inline-block mr-3" key={i}>{classe}</p>
+              })
+            }
 					</div>
 
 					<div className="settings">
@@ -71,15 +73,9 @@ const SpellCard = ({
 					</div>
 				</div>
 
-				<p>
-					{Description}
-				</p>
+				<p>{Description}</p>
 			</div>
-
-
-			
-
-			
+      
 		</div>
 	)
 }
