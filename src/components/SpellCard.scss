@@ -8,6 +8,14 @@ $disabled: #374151;
     .Header {
       background-color: $disabled;
       @apply rounded-t-md font-bold text-xl p-5;
+
+      p {
+        @apply inline-block;
+
+        & ~ p {
+          @apply ml-5;
+        }
+      }
     }
 
     .button {
@@ -33,7 +41,11 @@ $disabled: #374151;
         @apply border-b mb-5 pb-2;
 
         .classes, .settings, .type {
-          @apply mb-3
+          @apply mb-3;
+
+          .button ~ .button {
+            @apply ml-5;
+          }
         }
 
         .classes {

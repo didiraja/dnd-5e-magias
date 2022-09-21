@@ -28,13 +28,10 @@ const App = () => {
 
   return (
     <div className="App">
-      <header className="App-header my-12">
-
-        <div className="logo">
-          <h1 className="text-5xl font-bold">
-          {'Lista de Magias - D&D 5e'}
-          </h1>
-        </div>
+      <header className="App-header">
+        <h1>
+          {'Grimório de Magias para Dungeons and Dragons - 5e'}
+        </h1>
       </header>
 
       <div className="input-wrapper my-6">

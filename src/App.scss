@@ -1,6 +1,6 @@
 body {
-  background-color: #D9D9D9;
   color: white;
+  @apply bg-zinc-500;
 }
 
 input {
@@ -24,10 +24,6 @@ input {
   margin: 0 auto;
 }
 
-.prop-item {
-  @apply inline-block ml-3;
-}
-
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
@@ -35,13 +31,10 @@ input {
 }
 
 .App-header {
-  background-color: #282c34;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  background-color: #111827;
+  // color: white;
+
+  @apply font-bold text-2xl tracking-wider py-5;
 }
 
 .App-link {
